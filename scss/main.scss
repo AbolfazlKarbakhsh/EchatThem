@@ -54,6 +54,8 @@ $dark-color:rgb(32, 32, 32);
     }
 }
 
+
+
 .chat-content {
     position: relative;
     overflow-x: hidden;
@@ -265,7 +267,12 @@ ul {
         box-shadow: -4px 3px 5px 0 rgba(22, 22, 22, 0.466);
     }
 }
+button{
+    &:focus {
+        outline: none;
+    }
 
+}
 a {
     text-decoration: none;
 }

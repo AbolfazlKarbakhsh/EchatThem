@@ -1,3 +1,4 @@
+@import url('../css/DefualtStyle.css');
 @font-face {
   font-family: "IRANSans";
   src: url("../fonts/IRANSansWeb.eot") format("eot"), url("../fonts/IRANSansWeb.woff") format("woff"), url("../fonts/IRANSansWeb.ttf") format("truetype");
@@ -39,8 +40,17 @@
   .footer button {
     width: 15% !important;
   }
+  
+}
+@media (max-width: 767px) {
+.footer{
+  width: 100% !important;
+}
 }
 
+.pr-5{
+  padding-right: 10px;
+}
 .chat-content {
   position: relative;
   overflow-x: hidden;
@@ -58,9 +68,9 @@
 }
 
 .chat-content .header h2 {
-  font-size: 23px;
+  font-size: 15px;
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 15px;
   position: absolute;
   top: 16px;
 }
@@ -153,7 +163,7 @@
 
 .rooms ul li {
   position: relative;
-  padding: 10px;
+  padding: 20px;
   cursor: pointer;
   border-bottom: 1px solid rgba(128, 128, 128, 0.13);
   transition: all ease .2s;
@@ -263,18 +273,18 @@ ul {
   padding: 0;
 }
 
-.btn {
+.btn , .but{
   font-size: 13.5px;
   box-shadow: 0 0 5px 0 rgba(22, 22, 22, 0.466);
   transition: all ease .3s;
   border-radius: 0px;
 }
 
-.btn:focus {
+.btn:focus , .but:focus{
   outline: none;
 }
 
-.btn:hover {
+.btn:hover , .but:hover {
   transform: translateY(-1px);
   box-shadow: -4px 3px 5px 0 rgba(22, 22, 22, 0.466);
 }
@@ -300,5 +310,11 @@ ul {
 
 .auth h1 {
   color: white;
+}
+
+.groupbox{
+  padding: 10px;
+  background: #ffffff;
+  width: 90%;
 }
 /*# sourceMappingURL=main.css.map */

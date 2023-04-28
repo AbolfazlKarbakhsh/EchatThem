@@ -6,18 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/21089d9398.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/BootStrap/bootstrap.min.css">
+    <!-- <script src="https://kit.fontawesome.com/21089d9398.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body dir="rtl">
     <div class="content">
         <div class="row">
-            <div class="col-8 chat-content">
-                <div class="header">
-                    <img src="img/Default.jpg" />
-                    <h2>علی</h2>
+            <div class="col-12 col-md-8 chat-content d-none d-md-block tag1">
+                <div class="header " >
+                    <img src="img/Default.jpg" class="pointer" onclick=" openNav('.m31', '.m30', 'inherit', 'inherit', 'hidden', 'hidden','visibility');"/>
+                    <h2 class="font7 pointer"  onclick=" openNav('.m31', '.m30', 'inherit', 'inherit', 'hidden', 'hidden','visibility');">محمد مهدی صادقی</h2>
+
+                    <div class=" font8  text-left position-absolute mm d-md-none">
+                        <div class="effect"><span class="font-5 bi bi-box-arrow-left pointer clickVSort2" ></span></div>
+                    </div>
                 </div>
                 <div class="chats">
                     <div class="chat-me">
@@ -48,23 +54,42 @@
                 <div class="footer">
                     <form>
                         <input type="text" class="form-control" placeholder="متن خود را وارد کنید">
-                        <button class="btn btn-success">
-                        ارسال
-                        <i class="fa fa-send"></i>
-                    </button>
+                        <button class=" btn-success btn">
+                            ارسال
+                            <i class="fa fa-send"></i>
+                        </button>
                     </form>
                 </div>
             </div>
-            <div class="col-4 rooms">
-                <Ul>
-                    <li>
+
+            <div class="col-12 col-md-4 rooms p-2 p-md-0 d-md-block tag2">
+
+                <Ul id="users">
+                    <li class="FixBug">
+
+                        <div class="panelMobilTopNav col-12  overflow-hidden animatinLoad">
+                            <!-- text head  -->
+                            <div>
+                                <h1 class="h3  font7">پیام رسان همتا</h1>
+                            </div>
+
+
+                            <div>
+                                <i class="IconSet bi-filter-left activeBtn font7 FSarbaz p-2 effect rounded"
+                                    onclick="openNav('.gigamenu','.GigaMenuFother','100%','290px','0','0')"></i>
+                            </div>
+
+
+                        </div>
+                    </li>
+                    <li class="search">
                         <form>
                             <input type="text" placeholder="جستوجو کنید" class="form-control" />
                             <i class="fa fas fa-search"></i>
                         </form>
                     </li>
                     <li>
-                        Global
+                        محمد مهدی صادقی
                         <img src="img/Default.jpg" />
                         <span>17:20 1400/01/15 </span>
                     </li>
@@ -147,6 +172,93 @@
             </div>
         </div>
     </div>
+
+    <!-- modals -->
+    <!-- giga open dark-->
+    <div class="GigaMenuFother animatinLoad"></div>
+
+    <div class="col-5 col-md-3  gigamenu">
+        <div class="w-100 p-2">
+            <button class="btn btn-success w-100 p-2 rounded-1" id="BtnCreatGp">ایجاد گروه</button>
+        </div>
+    </div>
+
+
+
+    <!--  modal creat Group -->
+
+    <div class="modal-fother m20 d-flex-center">
+        <div class="modal-child m21 modal-size-main " onclick="event.stopPropagation()">
+            <div class="modal-form ">
+                <div class=" boxShadow p-1">
+                    <div class="groupbox container">
+                        <form action="">
+
+                            <h3 class="d-flex-beatwean font6">
+                                <div>  افزودن گروه</div>
+                                <div class="effect" onclick=" openNav('.m21', '.m20', 'inherit', 'inherit', 'hidden', 'hidden','visibility');"><span class="font-5 bi bi-box-arrow-left pointer  " ></span></div>
+                            </h3>
+                            <div class="mt-5 p-2 d-flex-around align-items-center">
+                                <p class="font4 p-0 m-0">
+                                    نام جدید گروه
+                                </p>
+                                <input type="text" class="form-control w-50" placeholder="دوست داران صادقی">
+                            </div>
+                            <div class="mt-2 p-2 d-flex-around align-items-center">
+                                <p class="font4 p-0 m-0">
+                                    عکس گروه
+                                </p>
+                                <input type="file" class="form-control-file" value="انتخاب فایل "
+                                    id="exampleFormControlFile1">
+                            </div>
+                            <div class="d-flex justify-content-end  m-1">
+                                <button class="btn btn-success rounded-2 p-2">ثبت اطلاعات</button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+        <!--  modal Exit Group -->
+
+        <div class="modal-fother m30 d-flex-center">
+            <div class="modal-child m31 modal-size-main " onclick="event.stopPropagation()">
+                <div class="modal-form ">
+                    <div class=" boxShadow p-1">
+                        <div class="groupbox container">
+                            <form action="">
+    
+                                <h3 class="d-flex-beatwean font6">
+                                    <div>   اطلاعات گروه</div>
+                                    <div class="effect" onclick=" openNav('.m31', '.m30', 'inherit', 'inherit', 'hidden', 'hidden','visibility');"><span class="font-5 bi bi-box-arrow-left pointer  " ></span></div>
+                                </h3>
+                                <div class="mt-5 p-2 d-flex-beatwean align-items-center">
+                                    <p class="font3 p-0 m-0">
+                                        نام  گروه
+                                    </p>
+                                    <p class="font3 p-0 m-0 pr-5">دوست داران صادقی</p>
+                                </div>
+                                <div class="mt-2 p-2 d-flex-beatwean align-items-center">
+                                    <p class="font4 p-0 m-0">
+                                        عکس گروه
+                                    </p>
+                                    <img src="/img/Default.jpg" alt="" class=" rounded-circle w-12">
+                                </div>
+                                <div class="d-flex justify-content-end  m-1 mt-3">
+                                    <button class="btn btn-danger  rounded-2 p-2">خروج از گروه </button>
+    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
     <script src="js/jquery.3.2.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/custom.js"></script>
